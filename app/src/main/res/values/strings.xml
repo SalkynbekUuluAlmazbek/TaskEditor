@@ -10,4 +10,7 @@
     <string name="all2">All</string>
     <string name="completed2">Completed</string>
     <string name="incomplete2">Incomplete</string>
+    <string name="enter_new_task_title">Enter new task title</string>
+    <string name="save">Save</string>
+    <string name="edittexttask">editTextTask</string>
 </resources>

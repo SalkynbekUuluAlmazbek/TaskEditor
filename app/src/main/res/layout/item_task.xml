@@ -11,8 +11,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal">
+
 
         <CheckBox
             android:id="@+id/checkBoxTask"
@@ -20,10 +21,30 @@
             android:layout_height="wrap_content"
             android:checked="@{task.isCompleted}"/>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/viewTextTask"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp"
             android:text="@{task.title}" />
 
+        <Button
+            android:id="@+id/btnSaveEdit"
+            android:layout_width="wrap_content"
+            android:padding="4dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:onClick="@{() -> viewModel.editTask(task)}" />
+
+        <Button
+            android:id="@+id/btnCancelEdit"
+            android:layout_width="wrap_content"
+            android:padding="4dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:onClick="@{() -> task.setEditing(false)}"/>
+
     </LinearLayout>
+
 </layout>

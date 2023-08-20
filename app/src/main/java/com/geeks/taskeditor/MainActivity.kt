@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
         binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
                 R.id.radioAll -> viewModel.setFilterType(FilterType.ALL)

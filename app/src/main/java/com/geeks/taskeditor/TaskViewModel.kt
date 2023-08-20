@@ -49,4 +49,10 @@ class TaskViewModel : ViewModel() {
     fun setFilterType(filterType: FilterType) {
         _filterType.postValue(filterType)
     }
+
+    fun editTask(task: Task) {
+        repository.updateTask(task)
+        _tasks.value = repository.getAllTasks()
+    }
+
 }
