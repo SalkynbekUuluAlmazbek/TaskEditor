@@ -13,4 +13,5 @@
     <string name="enter_new_task_title">Enter new task title</string>
     <string name="save">Save</string>
     <string name="edittexttask">editTextTask</string>
+    <string name="edit_your_task">Edit your task</string>
 </resources>

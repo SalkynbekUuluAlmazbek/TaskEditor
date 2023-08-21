@@ -24,6 +24,7 @@
         <EditText
             android:id="@+id/viewTextTask"
             android:layout_width="0dp"
+            android:hint="@string/edit_your_task"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:minHeight="48dp"
@@ -34,16 +35,9 @@
             android:layout_width="wrap_content"
             android:padding="4dp"
             android:layout_height="wrap_content"
-            android:text="Save"
-            android:onClick="@{() -> viewModel.editTask(task)}" />
+            android:text="Save" />
 
-        <Button
-            android:id="@+id/btnCancelEdit"
-            android:layout_width="wrap_content"
-            android:padding="4dp"
-            android:layout_height="wrap_content"
-            android:text="Cancel"
-            android:onClick="@{() -> task.setEditing(false)}"/>
+
 
     </LinearLayout>
 

@@ -45,29 +45,13 @@ class TaskAdapter(
                 true
             }
 
-            binding.root.setOnClickListener {
-                // Вход в режим редактирования
-                task.isEditing = true
-                notifyDataSetChanged() // Обновление списка для отображения редактируемого элемента
+            binding.btnSaveEdit.setOnClickListener {
+                task.title = binding.viewTextTask.text.toString()
+                task.isEditing = false
+                viewModel.editTask(task)
+                notifyDataSetChanged()
             }
 
-            if (task.isEditing) {
-                // Показать поле для редактирования и установить обработчики для сохранения и отмены
-                binding.viewTextTask.setText(task.title)
-
-                binding.btnSaveEdit.setOnClickListener {
-                    task.title = binding.viewTextTask.text.toString()
-                    task.isEditing = false
-                    viewModel.updateTask(task)
-                    notifyDataSetChanged()
-                }
-
-                binding.btnCancelEdit.setOnClickListener {
-                    task.isEditing = false
-                    notifyDataSetChanged()
-                }
-
-            }
         }
     }
 }

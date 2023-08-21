@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.geeks.taskeditor.adapter.TaskAdapter
 import com.geeks.taskeditor.databinding.ActivityMainBinding
 import com.geeks.taskeditor.model.FilterType
+import com.geeks.taskeditor.model.Task
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                 binding.editTextTask.text.clear()
             }
         }
+
 
         binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
